@@ -1,0 +1,38 @@
+{
+  "@@locale": "bg",
+  "appName": "Squad Manager",
+  "appTagline": "Отборът ти. На едно място.",
+  "introMatchesTitle": "Всички мачове",
+  "introMatchesBody": "Предстоящите срещи с гербове, място и час, по първенства.",
+  "introAttendanceTitle": "Идваш ли?",
+  "introAttendanceBody": "Един клик за присъствие. Ако не можеш, пишеш защо.",
+  "introLineupTitle": "Съставът на живо",
+  "introLineupBody": "Треньорът нарежда титулярите и всички го виждат веднага.",
+  "introRemindersTitle": "Нищо не пропускаш",
+  "introRemindersBody": "Напомняния преди мача, само ако още не си отговорил.",
+  "introPrevious": "Предишен",
+  "introNext": "Следващ",
+  "introSlideIndicator": "Слайд {current} от {total}",
+  "@introSlideIndicator": {
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "logoDescription": "Лого Squad Manager",
+  "signIn": "Вход",
+  "noAccount": "Нямаш акаунт?",
+  "contactUs": "Свържи се с нас",
+  "teams": "Отбори",
+  "profile": "Профил",
+  "contacts": "Контакти",
+  "lineupTitle": "Състав за мача",
+  "setPasswordTitle": "Задаване на парола",
+  "consentTitle": "Съгласие",
+  "matchesTitle": "Мачове",
+  "matchDetailTitle": "Мач",
+  "organizationTitle": "Организация",
+  "adminTitle": "Администрация",
+  "placeholderComingSoon": "Този екран предстои.",
+  "routeNotFound": "Страницата не е намерена."
+}
