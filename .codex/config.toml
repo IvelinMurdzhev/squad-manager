@@ -1,0 +1,13 @@
+# Project-scoped Codex settings for Squad Manager.
+# Codex loads this file only after you mark the project as trusted.
+# Check key names against the current Codex config reference if Codex warns on startup.
+
+# Codex may edit files inside the repo only; anything outside needs approval.
+sandbox_mode = "workspace-write"
+
+# Codex asks before running commands that need to leave the sandbox.
+approval_policy = "on-request"
+
+[sandbox_workspace_write]
+# Needed for `flutter pub get`, `npm ci` and the Firebase emulators.
+network_access = true
