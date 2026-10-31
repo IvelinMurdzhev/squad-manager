@@ -1,4 +1,4 @@
-package bg.squadmanager.squad_manager
+package bg.squadmanager
 
 import io.flutter.embedding.android.FlutterActivity
 
