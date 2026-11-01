@@ -262,6 +262,18 @@ abstract class AppLocalizations {
   /// **'Този екран предстои.'**
   String get placeholderComingSoon;
 
+  /// No description provided for @startupFailureTitle.
+  ///
+  /// In bg, this message translates to:
+  /// **'Приложението не може да стартира'**
+  String get startupFailureTitle;
+
+  /// No description provided for @startupFailureBody.
+  ///
+  /// In bg, this message translates to:
+  /// **'Възникна проблем при зареждането. Опитай да презаредиш страницата или опитай отново по-късно.'**
+  String get startupFailureBody;
+
   /// No description provided for @routeNotFound.
   ///
   /// In bg, this message translates to:

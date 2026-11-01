@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "squad-manager-dev",
+    "dev": "squad-manager-dev",
+    "prod": "squad-manager-de7c2"
+  }
+}

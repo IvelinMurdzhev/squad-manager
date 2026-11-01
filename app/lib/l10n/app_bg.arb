@@ -34,5 +34,7 @@
   "organizationTitle": "Организация",
   "adminTitle": "Администрация",
   "placeholderComingSoon": "Този екран предстои.",
-  "routeNotFound": "Страницата не е намерена."
+  "startupFailureTitle": "Приложението не може да стартира",
+  "startupFailureBody": "Възникна проблем при зареждането. Опитай да презаредиш страницата или опитай отново по-късно.",
+  "routeNotFound":"Страницата не е намерена."
 }
