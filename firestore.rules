@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  // Foundation only: no client data access until the step 1.1 access model.
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

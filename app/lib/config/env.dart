@@ -5,9 +5,11 @@ enum AppEnv {
   dev,
   prod;
 
+  /// Rejects unknown names so a typo can never select the wrong project.
   static AppEnv parse(String value) => switch (value) {
+    'dev' => AppEnv.dev,
     'prod' => AppEnv.prod,
-    _ => AppEnv.dev,
+    _ => throw ArgumentError.value(value, 'ENV', 'Expected "dev" or "prod"'),
   };
 }
 

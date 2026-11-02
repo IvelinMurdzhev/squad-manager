@@ -47,3 +47,6 @@ CLAUDE.local.md
 
 # --- Private working notes (never commit) ---
 /.hq/
+
+# --- Firebase API keys (public identifiers, but kept out of git) ---
+app/firebase_keys_*.json

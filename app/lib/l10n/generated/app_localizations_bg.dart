@@ -100,5 +100,12 @@ class AppLocalizationsBg extends AppLocalizations {
   String get placeholderComingSoon => 'Този екран предстои.';
 
   @override
+  String get startupFailureTitle => 'Приложението не може да стартира';
+
+  @override
+  String get startupFailureBody =>
+      'Възникна проблем при зареждането. Опитай да презаредиш страницата или опитай отново по-късно.';
+
+  @override
   String get routeNotFound => 'Страницата не е намерена.';
 }
