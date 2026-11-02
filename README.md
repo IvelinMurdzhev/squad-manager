@@ -95,9 +95,29 @@ flutter run -d chrome --dart-define=ENV=dev --dart-define-from-file=firebase_key
 flutter build web --dart-define=ENV=prod --dart-define-from-file=firebase_keys_prod.json
 ```
 
-Emulator runs (`USE_EMULATORS=true`) need no key file; a dummy key is used. Any other run without a key fails at startup with a clear error. Restrict each key in Google Cloud (Web: HTTP referrers; Android: package and SHA-1) and enforce App Check before production. Production builds and deploys are done by the owner.
+Emulator runs (`USE_EMULATORS=true`), tests and CI need no key file; a dummy key is used. Any other run without a key fails at startup with a clear error. Restrict each key in Google Cloud (Web: HTTP referrers; Android: package and SHA-1) and enforce App Check before production. Production builds and deploys are done by the owner.
 
 On Windows, if Node-based tools fail certificate validation behind a managed proxy, use the system trust store in that terminal (`$env:NODE_USE_SYSTEM_CA = '1'`). Do not disable TLS verification.
+
+### Continuous integration
+
+`.github/workflows/ci.yml` runs on every pull request and on pushes to `step/**` branches. It needs no secrets and no `firebase_keys_*.json` files; tests and emulator runs use the dummy key. Actions are pinned to commit SHAs.
+
+- **app**: Flutter stable; `flutter pub get`, `dart format --set-exit-if-changed .`, `flutter analyze`, `flutter test` in `app/`.
+- **functions**: Node 22; `npm ci`, `npm run lint`, `npm run build`, `npm test` in `functions/`.
+- **rules**: Node 22 and Java 21; `firebase-tools@15.34.2` runs `emulators:exec --project demo-squad-manager` with the `rules-tests` suite.
+
+These are the same commands as the local checks above, so a green local run should match CI.
+
+### Guard hook
+
+A pre-commit hook blocks commits that stage secret-like files (service accounts, `.env`, keystores) or private key content, and runs gitleaks when installed. Enable it once per clone:
+
+```sh
+git config core.hooksPath .hq/hooks
+```
+
+The hook lives in the owner's private `.hq/` directory, so public clones do not have it; rely on CI and `.gitignore` there. Never bypass it with `--no-verify`.
 
 ## Project guidance
 
