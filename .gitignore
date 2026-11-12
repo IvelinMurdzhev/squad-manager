@@ -1,0 +1,49 @@
+# --- Secrets: never commit (keep them outside the repo, e.g. ~/secure/squad-manager/) ---
+.env
+.env.*
+*.jks
+*.keystore
+key.properties
+*service-account*.json
+*-firebase-adminsdk-*.json
+secrets/
+
+# --- Flutter / Dart ---
+app/.dart_tool/
+app/build/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/android/.gradle/
+app/android/local.properties
+app/ios/Pods/
+*.iml
+.idea/
+
+# --- Node / Functions ---
+node_modules/
+functions/lib/
+rules-tests/node_modules/
+
+# --- Firebase ---
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+database-debug.log
+pubsub-debug.log
+*-debug.log
+emulator-data/
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# --- Agents: personal, not shared ---
+CLAUDE.local.md
+.claude/settings.local.json
+
+# --- Private working notes (never commit) ---
+/.hq/
